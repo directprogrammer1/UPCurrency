@@ -1,0 +1,95 @@
+.header {
+  display: flex;
+  width: 100%;
+  height: 4.5rem;
+  background-color: #8b5eff;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  flex: 0 0 auto;
+  position: fixed;
+  top: 0px;
+}
+
+.darker {
+  margin-top: 4.5rem;
+  display: flex;
+  flex: 0 0 auto;
+  width: 100%;
+  height: 4.5rem;
+  background-color: #311e55;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}
+
+.infobox {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 95%;
+  flex: 1;
+  min-height: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #232323;
+  border-radius: 3px;
+  color: white;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.data {
+  font-size: 17px;
+  padding-left: 20px;
+}
+
+.smallbox {
+  width: 60%;
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  justify-self: center;
+  background-color: #2b2b2b;
+  overflow-y: auto
+}
+
+.payment {
+  text-align: center;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #333333;
+  outline: 1px lightgray dashed
+}
+a {
+  color: #8b5eff;
+  text-decoration: none;
+}
+.paybutton {
+    margin-top: 15px;
+    text-align: center;
+    padding: 16px 16px 16px 16px;
+    transition: background 0.3s ease-in-out;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+    background: #8b5eff;
+    cursor: pointer;
+}
+button:hover {
+    background: #a684ff
+}
+button:active {
+    transform: none
+}
