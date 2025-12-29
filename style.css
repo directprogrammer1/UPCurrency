@@ -93,3 +93,16 @@ button:hover {
 button:active {
     transform: none
 }
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: #191919;
+  min-height: 100vh;
+}
+span, a, h1, h2, h3, h4, h5, h6, div, button {
+  font-family: Open Sans
+}
