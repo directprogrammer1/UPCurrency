@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="--sidebar-width: 300px;"><head>
+<html style="--sidebar-width: 180px;"><head>
         <title>United Patches Currency System</title>
         <link rel="stylesheet" href="https://directprogrammer1.github.io/UPCurrency/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
@@ -40,7 +40,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 </script></head>
-    <body style="margin: 0;height: 100%;background-color: #edf4ff;" class="">
+    <body style="margin: 0;height: 100%;background-color: #edf4ff;" class="sidebar-small">
     <style type="text/css">
     :root {
         --sidebar-width: 300px;
@@ -123,11 +123,11 @@ document.addEventListener('keydown', (e) => {
         const body = document.body;
     
         if (width <= 550) { // This is for really wide phones or really narrow monitors lol
-            document.documentElement.style.setProperty('--sidebar-width', '180px')
+            document.documentElement.style.setProperty('--sidebar-width', '120px')
             body.classList.add('sidebar-small');
             console.log("Set to 'small' sidebar width, text hidden")
         } else if (width <= 900) {
-            document.documentElement.style.setProperty('--sidebar-width', '120px')
+            document.documentElement.style.setProperty('--sidebar-width', '180px')
             body.classList.remove('sidebar-small');
             console.log("Set to 'medium' sidebar width, text show")
         } else {
@@ -154,4 +154,5 @@ document.addEventListener('keydown', (e) => {
     font-size: 2cqi;
 ">United Patches Currency System</h1>
 </div>
+
 </body></html>
