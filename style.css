@@ -27,7 +27,7 @@
   display: flex;
   width: 100%;
   height: 4.5rem;
-  background-color: --header;
+  background-color: var(--header);
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -43,7 +43,7 @@
   flex: 0 0 auto;
   width: 100%;
   height: 4.5rem;
-  background-color: --subh-light;
+  background-color: var(--subh-light);
   justify-content: center;
   align-items: center;
   font-size: 15px;
@@ -58,7 +58,7 @@
   min-height: 0;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: --info-light;
+  background-color: var(--info-light);
   border-radius: 3px;
   justify-self: center;
   align-self: center;
@@ -81,7 +81,7 @@
   justify-content: flex-start;
   align-items: center;
   justify-self: center;
-  background-color: --small-light;
+  background-color: var(--small-light);
   overflow-y: auto
 }
 
@@ -94,7 +94,7 @@
   outline: 1px lightgray dashed
 }
 a {
-  color: --header;
+  color: var(--header);
   text-decoration: none;
 }
 .paybutton {
@@ -104,12 +104,12 @@ a {
     transition: background 0.3s ease-in-out;
     border-radius: 5px;
     border: none;
-    outline: 10px --paybutton-outline-light solid;
-    background: --paybutton-light;
+    outline: 10px var(--paybutton-outline-light) solid;
+    background: var(--paybutton-light);
     cursor: pointer;
 }
 button:hover {
-    background: --paybutton-hover-light
+    background: var(--paybutton-hover-light)
 }
 button:active {
     transform: none
@@ -121,10 +121,10 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  background-color: --bg-light;
+  background-color: var(--bg-light);
   min-height: 100vh;
 }
 span, a, h1, h2, h3, h4, h5, h6, div, button {
   font-family: Open Sans;
-  color: --text-light
+  color: var(--text-light)
 }
