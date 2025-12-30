@@ -1,61 +1,154 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html style="--sidebar-width: 300px;"><head>
         <title>United Patches Currency System</title>
         <link rel="stylesheet" href="https://directprogrammer1.github.io/UPCurrency/style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
         <link rel="icon" type="image/x-icon" href="https://directprogrammer1.github.io/UPCurrency/assets/favicon.ico">
-    </head>
-    <body style="margin: 0;display: flex;flex-direction: column;height: 100%;background-color: #191919;">
-        <script type="module">
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js"; // First *actual* working javascript - got some help from chatgpt!
-            import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore.js";
+    <script type="text/javascript">
+let isPermissionGiven = false;
 
-            const firebaseConfig = {
-                apiKey: "AIzaSyAPS-UMSiECOBdzfEHLL9Ynt063s0ybTM8",
-                authDomain: "united-patches-currency.firebaseapp.com",
-                projectId: "united-patches-currency",
-                storageBucket: "united-patches-currency.appspot.com",
-                messagingSenderId: "not yet",
-                appId: "1:500543534224:web:ec5dfb9f912e3e619ad415"
-            }
-            
-            const app = initializeApp(firebaseConfig) // I'll save it for now this script doesn't work yet.
-        </script>
-        <div class="header">
-            <h3 style="padding: 0;margin: 0;border: 0;">United Patches Currency System</h3>
-        </div>
-        <div class="darker">Developped by @-GeometricalCoder (scratch)</div>
-        <div class="infobox">
-            <h2 id="name" style="text-align: center;margin: 0;">[ USERNAME ]</h2>
-            <h3 style="text-align: center;">Balance</h3>
-            <div class="smallbox" style="height: 8rem; justify-content: center;">
-                <h1 style="color: yellow;font-family: monospace;">0.00</h1>
-            </div>
-            <h3 style="text-align: center;">Recent Payments</h3>
-            <div class="smallbox" style="min-height: 0;display: flex;flex: 1;">
-                <div class="payment">
-                    <span>Made a payment of 1.00 U to <a href="none">other_user123</a>. </span>
-                    <br>
-                    <span style="font-size: 10px;color: lightgray;">2 minutes ago</span>
-                </div>
-                <div class="payment">
-                    <span>Received 3.00 U from <a href="none">yet_another_placeholder_yay_this_ones_long</a>. </span>
-                    <br>
-                    <span style="font-size: 10px;color: lightgray;">1 day ago</span>
-                </div>
-                <div class="payment">
-                    <span>Made a payment of 2.00 U to <a href="none">the_username_123_sigma</a>. </span>
-                    <br>
-                    <span style="font-size: 10px;color: lightgray;">Yesterday</span>
-                </div>
-                <div class="payment">
-                    <span>Received 6.50 U from <a href="none">jimjamslimslam (Admin)</a>. </span>
-                    <br>
-                    <span style="font-size: 10px;color: lightgray;">2 days ago</span>
-                </div>
-            </div>
-            <button class="paybutton" style=""><span>+</span> Make a Payment</button>
-        </div>
-    </body>
-</html>
+// no inspecty
+document.addEventListener('contextmenu', (e) => {
+    if (!isPermissionGiven) {
+        e.preventDefault();
+        alert('You really thought you could, huh? 🦜');
+    }
+});
+
+// 2. Block the F12!!!!!!
+document.addEventListener('keydown', (e) => {
+    if (isPermissionGiven) return;
+
+    // NO. INSPECTING. SOURCE. CODE.
+    if (
+        e.key === 'F12' || //these double bars look nice
+        ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'I') || // thanks for e. metakey, gemini!
+        ((e.ctrlKey || e.metaKey) && e.key === 'U')                 // Yo if you see this that means you got in! ping me on GA unless you are me myself and I.
+    ) {
+        e.preventDefault();
+
+        // Annoy
+        const input = prompt("⚠️ RESTRICTED AREA ⚠️\nI see you trying to peek at the code.\nEnter the password if you are really me :) :");
+
+        if (input === "Scratch7567") {
+            isPermissionGiven = true;
+            alert("✅ The password proves itself correct and seems quite user-friendly!! Passage remains unsacrificed.");
+        } else {
+            alert("⛔ THEE SHALT NOT PASSETH. THY PASSWORD IS INCORRECT."); 
+            // Now they are stuck outside >:)
+        }
+    }
+});
+</script></head>
+    <body style="margin: 0;height: 100%;background-color: #edf4ff;" class="">
+    <style type="text/css">
+    :root {
+        --sidebar-width: 300px;
+        --important: #1479ff;
+    }
+    .content-box {
+        filter:drop-shadow(0px 0px 30px #dddddd);
+        border-radius:20px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+    .sidebar {
+        position:fixed;
+        left:15px;
+        top: 15px;
+        bottom: 15px;
+        width:var(--sidebar-width);
+        height: auto;
+        align-items: center;
+    }
+    span, a, h1, h2, h3, h4, h5, h6, div, button, b, strong {
+        color: #193b68;
+        font-family: Poppins;
+    }
+    .icon {
+        width: 60%;
+        aspect-ratio: 1/1;
+        stroke: var(--important);
+        stroke-width: 0.85px;
+        text-align: center;
+    }
+    .tab {
+        --tab-bg: #e8f4ff;
+        cursor: pointer;
+        width: 60%;
+        aspect-ratio: 1/1;
+        transition: all 0.4s ease-in-out;
+        background: var(--tab-bg);
+        border-radius: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 30px 7px var(--tab-bg);
+        border-radius: 20px;
+        margin: 12px auto
+    }
+    .tab:hover {
+        background: #ddedff
+    }
+    .tab strong {
+        display: block
+    }
+    body.sidebar-small .tab strong {
+        display: none
+    }
+    .glow {
+        filter: drop-shadow(0px 0px 7px var(--important))
+    }
+    .title {
+        position: fixed;
+        top: 15px;
+        left: calc(var(--sidebar-width) + 40px);
+        width: calc(50% - (var(--sidebar-width) / 2 + 40px));
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden
+    }
+</style>
+<script type="text/javascript">
+    // Small, Medium, and Large isdebars
+    function scaleSidebar(){
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        const body = document.body;
+    
+        if (width <= 550) { // This is for really wide phones or really narrow monitors lol
+            document.documentElement.style.setProperty('--sidebar-width', '180px')
+            body.classList.add('sidebar-small');
+            console.log("Set to 'small' sidebar width, text hidden")
+        } else if (width <= 900) {
+            document.documentElement.style.setProperty('--sidebar-width', '120px')
+            body.classList.remove('sidebar-small');
+            console.log("Set to 'medium' sidebar width, text show")
+        } else {
+            document.documentElement.style.setProperty('--sidebar-width', '300px')
+            body.classList.remove('sidebar-small');
+            console.log("Set to large sidebar, please don't make the screen any larger! Lol! Note: text was shown!")
+        }
+    }
+    scaleSidebar() // Why does it look soooooo ugly, normally in VS code it becomes COLOuRFUL!!!! bye bye americans i think
+
+    window.addEventListener('resize', scaleSidebar())
+</script>
+    <div class="content-box sidebar" style="text-align: center;padding-top: 40px;padding-bottom: 40px;overflow-y: auto;">
+    
+<a href="/" class="tab"><svg class="icon glow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"></path></svg><strong class="glow" style="
+    color: var(--important);
+">Profile</strong></a><a class="tab"><svg xmlns="http://www.w3.org/2000/svg" class="icon glow" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 13a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M15 9a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M9 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M4 20h14"></path></svg><strong class="glow" style="
+    color: var(--important);
+">Leaderboard</strong></a><div class="sidebar-bottom" style="margin-top: 20px;">NOTE: This is still a static website. More is coming soon!! Stay tuned!!</div></div>
+<div class="content-box title" style="text-align: center;padding-top: 40px;padding-bottom: 40px;overflow-y: hidden;">
+    <h1 style="
+    color: var(--important);
+">United Patches Currency System</h1>
+</div></body></html>
