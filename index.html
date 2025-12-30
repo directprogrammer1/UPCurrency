@@ -7,6 +7,21 @@
         <link rel="icon" type="image/x-icon" href="https://directprogrammer1.github.io/UPCurrency/assets/favicon.ico">
     </head>
     <body style="margin: 0;display: flex;flex-direction: column;height: 100%;background-color: #191919;">
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js"; // First *actual* working javascript - got some help from chatgpt!
+            import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore.js";
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyAPS-UMSiECOBdzfEHLL9Ynt063s0ybTM8",
+                authDomain: "united-patches-currency.firebaseapp.com",
+                projectId: "united-patches-currency",
+                storageBucket: "united-patches-currency.appspot.com",
+                messagingSenderId: "not yet",
+                appId: "1:500543534224:web:ec5dfb9f912e3e619ad415"
+            }
+            
+            const app = initializeApp(firebaseConfig) // I'll save it for now this script doesn't work yet.
+        </script>
         <div class="header">
             <h3 style="padding: 0;margin: 0;border: 0;">United Patches Currency System</h3>
         </div>
