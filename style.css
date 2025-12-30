@@ -1,12 +1,36 @@
+
+:root {
+  --bg-dark: ##191919;
+  --text-dark: white;
+  --header: #8b5eff;
+  --subh-dark: #311e55;
+  --info-dark: #232323;
+  --small-dark: #2b2b2b;
+  --payment-dark: #333333;
+  --paybutton-dark: #8b5eff;
+  --paybutton-hover-dark: a684ff;
+  --paybutton-outline-dark: #513699;
+  --payment-outline-dark: lightgray;
+  --bg-light: white;
+  --info-light: #f1f1f1;
+  --text-light: black;
+  --subh-light: #c3a4ff;
+  --small-light: #b8b8b8;
+  --payment-light: #adadad;
+  --payment-outline-light: #636363;
+  --paybutton-light: #ff8000;
+  --paybutton-hover-light: #ffa54a;
+  --paybutton-outline-light: #ffc08f;
+}
+
 .header {
   display: flex;
   width: 100%;
   height: 4.5rem;
-  background-color: #8b5eff;
+  background-color: --header;
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  color: white;
   text-align: center;
   flex: 0 0 auto;
   position: fixed;
@@ -19,11 +43,10 @@
   flex: 0 0 auto;
   width: 100%;
   height: 4.5rem;
-  background-color: #311e55;
+  background-color: --subh-light;
   justify-content: center;
   align-items: center;
   font-size: 15px;
-  color: white;
   text-align: center;
 }
 
@@ -35,9 +58,8 @@
   min-height: 0;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #232323;
+  background-color: --info-light;
   border-radius: 3px;
-  color: white;
   justify-self: center;
   align-self: center;
   display: flex;
@@ -59,7 +81,7 @@
   justify-content: flex-start;
   align-items: center;
   justify-self: center;
-  background-color: #2b2b2b;
+  background-color: --small-light;
   overflow-y: auto
 }
 
@@ -72,7 +94,7 @@
   outline: 1px lightgray dashed
 }
 a {
-  color: #8b5eff;
+  color: --header;
   text-decoration: none;
 }
 .paybutton {
@@ -82,13 +104,12 @@ a {
     transition: background 0.3s ease-in-out;
     border-radius: 5px;
     border: none;
-    outline: none;
-    color: white;
-    background: #8b5eff;
+    outline: 10px --paybutton-outline-light solid;
+    background: --paybutton-light;
     cursor: pointer;
 }
 button:hover {
-    background: #a684ff
+    background: --paybutton-hover-light
 }
 button:active {
     transform: none
@@ -100,9 +121,10 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  background-color: #191919;
+  background-color: --bg-light;
   min-height: 100vh;
 }
 span, a, h1, h2, h3, h4, h5, h6, div, button {
-  font-family: Open Sans
+  font-family: Open Sans;
+  color: --text-light
 }
