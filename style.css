@@ -90,8 +90,8 @@
   width: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  background-color: #333333;
-  outline: 1px lightgray dashed
+  background-color: var(--payment-light);
+  outline: 1px var(--payment-outline-light) dashed
 }
 a {
   color: var(--header);
