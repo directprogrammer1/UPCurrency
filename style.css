@@ -1,148 +1,148 @@
-      :root {
-        --sidebar-width: 300px;
-        --important: #1479ff;
-      }
+:root {
+  --sidebar-width: 300px;
+  --important: #1479ff;
+}
 
-      .content-box {
-        filter: drop-shadow(0px 0px 30px #dddddd);
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-      }
+.content-box {
+  filter: drop-shadow(0px 0px 30px #dddddd);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
 
-      .sidebar {
-        position: fixed;
-        top: -20px;
-        left: 0px;
-        width: var(--sidebar-width);
-        height: 120%;
-        align-items: center;
-      }
+.sidebar {
+  position: fixed;
+  top: -20px;
+  left: 0px;
+  width: var(--sidebar-width);
+  height: 120%;
+  align-items: center;
+}
 
-      span,
-      a,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      div,
-      button,
-      b,
-      strong {
-        color: #193b68;
-        font-family: Nunito;
-      }
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+button,
+b,
+strong {
+  color: #193b68;
+  font-family: Nunito;
+}
 
-      .icon {
-        width: 40%;
-        aspect-ratio: 1/1;
-        stroke: var(--important);
-        stroke-width: 0.85px;
-        text-align: center;
-      }
+.icon {
+  width: 40%;
+  aspect-ratio: 1/1;
+  stroke: var(--important);
+  stroke-width: 0.85px;
+  text-align: center;
+}
 
-      .tab {
-        --tab-bg: white;
-        cursor: pointer;
-        width: 100%%;
-        height: 130px;
-        transition: all 0.4s ease-in-out;
-        background: var(--tab-bg);
-        border-radius: 20px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0px 0px 30px 7px var(--tab-bg);
-        margin: 0px auto;
-      }
+.tab {
+  --tab-bg: white;
+  cursor: pointer;
+  width: 100%%;
+  height: 130px;
+  transition: all 0.4s ease-in-out;
+  background: var(--tab-bg);
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 30px 7px var(--tab-bg);
+  margin: 0px auto;
+}
 
-      .tab:hover {
-        background: #e9f3ff
-      }
+.tab:hover {
+  background: #e9f3ff
+}
 
-      .tab strong {
-        display: block
-      }
+.tab strong {
+  display: block
+}
 
-      body.sidebar-small .tab strong {
-        display: none
-      }
+body.sidebar-small .tab strong {
+  display: none
+}
 
-      .glow {
-        filter: drop-shadow(0px 0px 7px var(--important))
-      }
+.glow {
+  filter: drop-shadow(0px 0px 7px var(--important))
+}
 
-      .title {
-        position: fixed;
-        top: 15px;
-        left: calc(var(--sidebar-width) + 40px);
-        width: calc(50% - (var(--sidebar-width) / 2 + 40px));
-        height: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden
-      }
+.title {
+  position: fixed;
+  top: 15px;
+  left: calc(var(--sidebar-width) + 40px);
+  width: calc(50% - (var(--sidebar-width) / 2 + 40px));
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
 
-      .balancebox {
-        border-radius: 15px;
-        outline: 1px lightgray solid;
-        background-color: white;
-        width: 100%;
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: auto;
-        max-height: 400px;
-        flex-direction: column
-      }
+.balancebox {
+  border-radius: 15px;
+  outline: 1px lightgray solid;
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  max-height: 400px;
+  flex-direction: column
+}
 
-      .btn {
-        --btn-bg: var(--btn);
-        cursor: pointer;
-        min-height: 50px;
-        border-radius: 15px;
-        transition: all 0.3s ease-in-out;
-        background: var(--btn-bg);
-        outline: none;
-        box-shadow: 0px 0px 14px 2px lightgray;
-        border: 17px;
-      }
+.btn {
+  --btn-bg: var(--btn);
+  cursor: pointer;
+  min-height: 50px;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  background: var(--btn-bg);
+  outline: none;
+  box-shadow: 0px 0px 14px 2px lightgray;
+  border: 17px;
+}
 
-      .btn:hover {
-        background: var(--btn-hover)
-      }
+.btn:hover {
+  background: var(--btn-hover)
+}
 
-      .btn:active {
-        transform: none
-      }
+.btn:active {
+  transform: none
+}
 
-      .balance-activity {
-        display: flex;
-        flex-direction: row;
-        width: calc(100% - var(--sidebar-width))
-      }
+.balance-activity {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - var(--sidebar-width))
+}
 
-      .bio-in {
-        width: calc(100% - 24px);
-        height: calc(100% - 68px);
-        border-radius: 10px;
-        border: none;
-        background-color: #eef1f6;
-        outline: none;
-        word-wrap: normal;
-        font-family: 'Nunito';
-        padding: 10px;
-      }
+.bio-in {
+  width: calc(100% - 24px);
+  height: calc(100% - 68px);
+  border-radius: 10px;
+  border: none;
+  background-color: #eef1f6;
+  outline: none;
+  word-wrap: normal;
+  font-family: 'Nunito';
+  padding: 10px;
+}
 
-      .bio-in:active {
-        transform: none;
-        outline: none
-      }
+.bio-in:active {
+  transform: none;
+  outline: none
+}
