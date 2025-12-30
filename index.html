@@ -1,83 +1,94 @@
 <!DOCTYPE html>
-<html style="--sidebar-width: 180px;"><head>
-        <title>United Patches Currency System</title>
-        <link rel="stylesheet" href="https://directprogrammer1.github.io/UPCurrency/style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-        <link rel="icon" type="image/x-icon" href="https://directprogrammer1.github.io/UPCurrency/assets/favicon.ico">
+<html style="--sidebar-width: 300px;">
+  <head>
+    <title>United Patches Currency System</title>
+    <link rel="stylesheet" href="https://directprogrammer1.github.io/UPCurrency/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <link rel="icon" type="image/x-icon" href="https://directprogrammer1.github.io/UPCurrency/assets/favicon.ico">
     <script type="text/javascript">
-let isPermissionGiven = false;
-
-// no inspecty
-document.addEventListener('contextmenu', (e) => {
-    if (!isPermissionGiven) {
-        e.preventDefault();
-        alert('You really thought you could, huh? 🦜');
-    }
-});
-
-// 2. Block the F12!!!!!!
-document.addEventListener('keydown', (e) => {
-    if (isPermissionGiven) return;
-
-    // NO. INSPECTING. SOURCE. CODE.
-    if (
-        e.key === 'F12' || //these double bars look nice
-        ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'I') || // thanks for e. metakey, gemini!
-        ((e.ctrlKey || e.metaKey) && e.key === 'U')                 // Yo if you see this that means you got in! ping me on GA unless you are me myself and I.
-    ) {
-        e.preventDefault();
-
-        // Annoy
-        const input = prompt("⚠️ RESTRICTED AREA ⚠️\nI see you trying to peek at the code.\nEnter the password if you are really me :) :");
-
-        if (input === "Scratch7567") {
+      let isPermissionGiven = false;
+      // no inspecty
+      document.addEventListener('contextmenu', (e) => {
+        if (!isPermissionGiven) {
+          e.preventDefault();
+          alert('You really thought you could, huh? 🦜');
+        }
+      });
+      // 2. Block the F12!!!!!!
+      document.addEventListener('keydown', (e) => {
+        if (isPermissionGiven) return;
+        // NO. INSPECTING. SOURCE. CODE.
+        if (e.key === 'F12' || //these double bars look nice
+          ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'I') || // thanks for e. metakey, gemini!
+          ((e.ctrlKey || e.metaKey) && e.key === 'U') // Yo if you see this that means you got in! ping me on GA unless you are me myself and I.
+        ) {
+          e.preventDefault();
+          // Annoy
+          const input = prompt("⚠️ RESTRICTED AREA ⚠️\nI see you trying to peek at the code.\nEnter the password if you are really me :) :");
+          if (input === "Scratch7567") {
             isPermissionGiven = true;
             alert("✅ The password proves itself correct and seems quite user-friendly!! Passage remains unsacrificed.");
-        } else {
-            alert("⛔ THEE SHALT NOT PASSETH. THY PASSWORD IS INCORRECT."); 
+          } else {
+            alert("⛔ THEE SHALT NOT PASSETH. THY PASSWORD IS INCORRECT.");
             // Now they are stuck outside >:)
+          }
         }
-    }
-});
-</script></head>
-    <body style="margin: 0;height: 100%;background-color: #edf4ff;" class="sidebar-small">
+      });
+    </script>
+  </head>
+  <body style="margin: 0;height: 100%;background-color: #edf4ff;" class="">
     <style type="text/css">
-    :root {
+      :root {
         --sidebar-width: 300px;
         --important: #1479ff;
-    }
-    .content-box {
-        filter:drop-shadow(0px 0px 30px #dddddd);
-        border-radius:20px;
+      }
+
+      .content-box {
+        filter: drop-shadow(0px 0px 30px #dddddd);
+        border-radius: 20px;
         display: flex;
         flex-direction: column;
         background-color: white;
-    }
-    .sidebar {
-        position:fixed;
-        left:15px;
-        top: 15px;
-        bottom: 15px;
-        width:var(--sidebar-width);
-        height: auto;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: -20px;
+        left: 0px;
+        width: var(--sidebar-width);
+        height: 120%;
         align-items: center;
-    }
-    span, a, h1, h2, h3, h4, h5, h6, div, button, b, strong {
+      }
+
+      span,
+      a,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      div,
+      button,
+      b,
+      strong {
         color: #193b68;
-        font-family: Poppins;
-    }
-    .icon {
-        width: 60%;
+        font-family: Nunito;
+      }
+
+      .icon {
+        width: 40%;
         aspect-ratio: 1/1;
         stroke: var(--important);
         stroke-width: 0.85px;
         text-align: center;
-    }
-    .tab {
-        --tab-bg: #e8f4ff;
+      }
+
+      .tab {
+        --tab-bg: white;
         cursor: pointer;
-        width: 60%;
-        aspect-ratio: 1/1;
+        width: 100%%;
+        height: 130px;
         transition: all 0.4s ease-in-out;
         background: var(--tab-bg);
         border-radius: 20px;
@@ -87,22 +98,26 @@ document.addEventListener('keydown', (e) => {
         justify-content: center;
         align-items: center;
         box-shadow: 0px 0px 30px 7px var(--tab-bg);
-        border-radius: 20px;
-        margin: 12px auto
-    }
-    .tab:hover {
-        background: #ddedff
-    }
-    .tab strong {
+        margin: 0px auto;
+      }
+
+      .tab:hover {
+        background: #e9f3ff
+      }
+
+      .tab strong {
         display: block
-    }
-    body.sidebar-small .tab strong {
+      }
+
+      body.sidebar-small .tab strong {
         display: none
-    }
-    .glow {
+      }
+
+      .glow {
         filter: drop-shadow(0px 0px 7px var(--important))
-    }
-    .title {
+      }
+
+      .title {
         position: fixed;
         top: 15px;
         left: calc(var(--sidebar-width) + 40px);
@@ -113,46 +128,225 @@ document.addEventListener('keydown', (e) => {
         justify-content: center;
         align-items: center;
         overflow: hidden
-    }
-</style>
-<script type="text/javascript">
-    // Small, Medium, and Large isdebars
-    function scaleSidebar(){
+      }
+
+      .balancebox {
+        border-radius: 15px;
+        outline: 1px lightgray solid;
+        background-color: white;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        max-height: 400px;
+        flex-direction: column
+      }
+
+      .btn {
+        --btn-bg: var(--btn);
+        cursor: pointer;
+        min-height: 50px;
+        border-radius: 15px;
+        transition: all 0.3s ease-in-out;
+        background: var(--btn-bg);
+        outline: none;
+        box-shadow: 0px 0px 14px 2px lightgray;
+        border: 17px;
+      }
+
+      .btn:hover {
+        background: var(--btn-hover)
+      }
+
+      .btn:active {
+        transform: none
+      }
+
+      .balance-activity {
+        display: flex;
+        flex-direction: row;
+        width: calc(100% - var(--sidebar-width))
+      }
+
+      .bio-in {
+        width: calc(100% - 24px);
+        height: calc(100% - 68px);
+        border-radius: 10px;
+        border: none;
+        background-color: #eef1f6;
+        outline: none;
+        word-wrap: normal;
+        font-family: 'Nunito';
+        padding: 10px;
+      }
+
+      .bio-in:active {
+        transform: none;
+        outline: none
+      }
+    </style>
+    <script type="text/javascript">
+      // Small, Medium, and Large isdebars
+      function scaleSidebar() {
         const width = window.innerWidth;
         const height = window.innerHeight;
         const body = document.body;
-    
         if (width <= 550) { // This is for really wide phones or really narrow monitors lol
-            document.documentElement.style.setProperty('--sidebar-width', '120px')
-            body.classList.add('sidebar-small');
-            console.log("Set to 'small' sidebar width, text hidden")
+          document.documentElement.style.setProperty('--sidebar-width', '120px')
+          body.classList.add('sidebar-small');
+          console.log("Set to 'small' sidebar width, text hidden")
         } else if (width <= 900) {
-            document.documentElement.style.setProperty('--sidebar-width', '180px')
-            body.classList.remove('sidebar-small');
-            console.log("Set to 'medium' sidebar width, text show")
+          document.documentElement.style.setProperty('--sidebar-width', '180px')
+          body.classList.remove('sidebar-small');
+          console.log("Set to 'medium' sidebar width, text show")
         } else {
-            document.documentElement.style.setProperty('--sidebar-width', '300px')
-            body.classList.remove('sidebar-small');
-            console.log("Set to large sidebar, please don't make the screen any larger! Lol! Note: text was shown!")
+          document.documentElement.style.setProperty('--sidebar-width', '300px')
+          body.classList.remove('sidebar-small');
+          console.log("Set to large sidebar, please don't make the screen any larger! Lol! Note: text was shown!")
         }
-    }
-    scaleSidebar() // Why does it look soooooo ugly, normally in VS code it becomes COLOuRFUL!!!! bye bye americans i think
-
-    window.addEventListener('resize', scaleSidebar)
-</script>
-
+      }
+      scaleSidebar() // Why does it look soooooo ugly, normally in VS code it becomes COLOuRFUL!!!! bye bye americans i think
+      window.addEventListener('resize', scaleSidebar)
+    </script>
     <div class="content-box sidebar" style="text-align: center;padding-top: 40px;padding-bottom: 40px;overflow-y: auto;">
-    
-<a href="/UPCurrency" class="tab"><svg class="icon glow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"></path></svg><strong class="glow" style="
+      <h1 style="
     color: var(--important);
-">Profile</strong></a><a class="tab"><svg xmlns="http://www.w3.org/2000/svg" class="icon glow" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 13a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M15 9a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M9 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M4 20h14"></path></svg><strong class="glow" style="
+">UPCS</h1>
+      <a href="/UPCurrency" class="tab">
+        <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="0.5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon glow">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+          <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+          <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"></path>
+        </svg>
+        <strong class="glow" style="
     color: var(--important);
-">Leaderboard</strong></a><div class="sidebar-bottom" style="margin-top: 20px;">NOTE: This is still a static website. More is coming soon!! Stay tuned!!</div></div>
-<div class="content-box title" style="text-align: center;padding-top: 40px;padding-bottom: 40px;overflow-y: hidden;">
-    <h1 style="
+">Profile</strong>
+      </a>
+      <a class="tab">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon glow" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 13a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+          <path d="M15 9a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+          <path d="M9 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+          <path d="M4 20h14"></path>
+        </svg>
+        <strong class="glow" style="
     color: var(--important);
-    font-size: 2cqi;
-">United Patches Currency System</h1>
-</div>
-
-</body></html>
+">Leaderboard</strong>
+      </a>
+      <div class="sidebar-bottom" style="margin-top: 20px;">NOTE: This is still a static website. More is coming soon!! Stay tuned!!</div>
+    </div>
+    <!--- I gave up on putting the styles in the <style> tag/style.css file. Anyways, almost done!-->
+    <div class="balance-activity" style="margin-left: calc(var(--sidebar-width) + 25px);">
+      <div style="
+    text-align: center;
+    width: 50%;
+">
+        <h1 style="
+    font-size: 50px;
+    margin-top: 25px;
+">Account Balance</h1>
+        <div class="balancebox" style="
+">
+          <h2 style="
+    font-size: 40px;
+    overflow-wrap: anywhere;
+    margin: 0;
+    color: #bec7d6;
+    font-weight: 100;
+">1250.0</h2>
+          <h2 style="
+    color: #bfc7d5;
+    font-size: 60px;
+    overflow-wrap: anywhere;
+    margin: 0;
+">₱</h2>
+        </div>
+        <button class="btn" style="
+    --btn: var(--important););
+    width: 100%;
+    color: white;
+    --btn-hover: #3d90ff;
+    margin: 30px 0px 15px;
+"> Make a Transaction</button>
+        <button class="btn" style="
+    --btn: white;);
+    width: 100%;
+    --btn-hover: #f5f5f5;
+    margin: 0;
+">Mine for Income</button>
+      </div>
+      <div class="content-box" style="
+    margin-left: 30px;
+    flex: 1;
+    margin-right: 55px;
+    margin-top: 30px;
+    text-align: center;
+    overflow-y: auto;
+">
+        <div style="
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-top: auto;
+    overflow-y: auto;
+    padding: 10px 0px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 1;
+">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-10" style="
+    stroke: #1f3a66;
+    width: 27px;
+    stroke-width: 2.4;
+    margin-right: 8px;
+">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+            <path d="M12 12l-3 -2"></path>
+            <path d="M12 7v5"></path>
+          </svg>Activity
+        </div>
+        <div style="flex: 1;background-color: #eef1f6;z-index: 3;border-radius: 20px;margin: 5px;padding-top: 10px;">
+          <span style="font-style: italic;color: #c0c2c5;">No activity yet... 🤔</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-left: calc(var(--sidebar-width) + 25px);display: flex;flex-direction: column;padding-top: 25px;flex: 1;margin-bottom: 20px;">
+      <div class="content-box" style="
+    width: 50%;
+    height: 100%;
+">
+        <img src="https://uploads.scratch.mit.edu/get_image/user/default_80x80.png" style="
+    width: 80px;
+    border-radius: 5px;
+    outline: 2px gray solid;
+    align-self: center;
+    margin: 15px 0px;
+">
+        <span style="
+    text-align: center;
+">User (You)</span>
+        <div style="
+    background-color: #eef1f6;
+    width: calc(100% - 10);
+    height: 100%;
+    border-radius: 10px;
+    margin: 10px;
+">
+          <h3 style="
+    margin: 10px;
+    text-align: center;
+">My Bio</h3>
+          <textarea class="bio-in" id="bio-in" placeholder="Enter Bio..." style="outline: none;overflow-wrap: normal;font-family: Nunito;padding: 10px;resize: none;"></textarea>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
