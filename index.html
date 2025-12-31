@@ -1,6 +1,6 @@
-<!DOCTYPE html>
 <html style="--sidebar-width: 260px;" data-darkreader-proxy-injected="true">
   <head>
+    <!-- IT'S NOT CALLED MODAL!!! -->
     <title>United Patches Currency System</title>
     <link rel="stylesheet" href="https://directprogrammer1.github.io/UPCurrency/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
@@ -37,7 +37,59 @@
     </script>
   </head>
   <body style="margin: 0;height: 100%;background-color: #edf4ff;" class="">
-    <script type="text/javascript">
+    <!-- THIS IS NOT. A. MODAL. --><div id="auth-overlay" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background: #0000008a;
+    z-index: 10;
+"><div class="content-box" style="
+    width: 400px;
+    height: 600px;
+    position: fixed;
+    top: calc(50% - 320px);
+    left: calc(50% - 220px);
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
+"><h1>Login via Scratch</h1><p style="
+    font-size: 19px;
+">To log in, copy the code below and comment it using your scratch account on the authentication project. Then, press "Proceed" to log in or register.</p><div contenteditable="false" id="auth-code" style="
+    width: 100%;
+    height: 60px;
+    background-color: #e1e1e1;
+    align-self: center;
+    border-radius: 10px;
+    overflow-x: auto;
+    outline: none;
+    resize: none;
+    font-family: 'Nunito';
+    text-align: center;
+    padding-top: 38px;
+    white-space: nowrap;
+">Insert Code Here</div><button class="loginButton" style="
+    --btn: var(--important););
+    --btn-hover: #4c86ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+" onclick="copyCode()"><svg
+					xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z"></path><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1"></path></svg>Copy Code
+</button><button class="loginButton" style="
+    --btn: #d1d1d1;);
+    --btn-hover: #bdbdbd;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+" onclick="window.open('https://scratch.mit.edu/projects/1260682528/', '_blank').focus()">
+    Open Authentication Project
+</button></div></div><script type="text/javascript">
       // Small, Medium, and Large isdebars // typo oh no!!
       function scaleSidebar() {
         const width = window.innerWidth;
@@ -59,58 +111,66 @@
       }
       scaleSidebar() // Why does it look soooooo ugly, normally in VS code it becomes COLOuRFUL!!!! bye bye americans i think
       window.addEventListener('resize', scaleSidebar)
-    </script>
-    <div class="content-box sidebar" style="text-align: center;padding-top: 40px;padding-bottom: 40px;overflow-y: auto;">
-      <h1 style="
+    </script><div class="content-box sidebar" style="text-align: center;padding-top: 40px;padding-bottom: 40px;overflow-y: auto;"><h1 style="
     color: var(--important);
-">UPCS</h1>
-      <a href="/UPCurrency" class="tab">
-        <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="0.5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon glow">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-          <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-          <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"></path>
-        </svg>
-        <strong class="glow" style="
+">UP Central Bank</h1><a href="/UPCurrency" class="tab"><svg stroke-linejoin="round" stroke-linecap="round" stroke-width="0.5" fill="none" viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg" class="icon glow"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"></path></svg><strong class="glow" style="
     color: var(--important);
-">Profile</strong>
-      </a>
-      <a class="tab">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon glow" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M3 13a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
-          <path d="M15 9a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
-          <path d="M9 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
-          <path d="M4 20h14"></path>
-        </svg>
-        <strong class="glow" style="
+">Profile</strong></a><a class="tab"><svg
+					xmlns="http://www.w3.org/2000/svg" class="icon glow" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 13a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M15 9a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M9 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M4 20h14"></path></svg><strong class="glow" style="
     color: var(--important);
-">Leaderboard</strong>
-      </a>
-      <div class="sidebar-bottom" style="margin-top: 20px;">NOTE: This is still a static website. More is coming soon!! Stay tuned!!</div>
-    </div>
-    <!--- I gave up on putting the styles in the <style> tag/style.css file. Anyways, almost done!-->
-    <div style="margin-left: calc(var(--sidebar-width) + 25px);display: flex;flex-direction: column;padding-top: 25px;height: calc(50vh - 45px);">
+">Leaderboard</strong></a><div class="sidebar-bottom" style="margin-top: 20px;">NOTE: This is still a static website. More is coming soon!! Stay tuned!!</div></div>
+					<!--- I gave up on putting the styles in the <style> tag/style.css file. Anyways, almost done!-->
+    <div style="margin-left: calc(var(--sidebar-width) + 25px);display: flex;flex-direction: row;padding-top: 25px;height: calc(50vh - 45px);">
       <div class="content-box" style="
     height: 100%;
     padding: 0px 15px;
     flex: 1;
     margin-right: 20px;
+    flex-direction: row;
+    gap: 15px;
 ">
-        <img src="https://uploads.scratch.mit.edu/get_image/user/default_80x80.png" style="
+        <div style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+">
+          <div style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+">
+            <img id="profile-picture" title="profile picture" src="https://uploads.scratch.mit.edu/get_image/user/default_80x80.png" style="
     width: 80px;
     border-radius: 5px;
     align-self: center;
     margin: 15px 0px;
     filter: drop-shadow(0px 0px 8px);
 ">
-        <span style="
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check-icon lucide-badge-check" style="
+    width: 50px;
+">
+              <title>UPCB User</title>
+              <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            <svg id="admin-badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-star-icon lucide-circle-star" style="width: 50px;">
+              <title>This user is the admin.</title>
+              <path d="M11.051 7.616a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.867l-1.156-1.152a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z"></path>
+              <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+            <!--- The admin badge only shows up for me (admin) --->
+          </div>
+          <span style="
     text-align: center;
-">User (You)</span>
-        <div style="
+" id="u-username">User (You)</span>
+          <div style="
     background-color: #eef1f6;
     width: 100%;
-    height: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
     display: flex;
@@ -119,14 +179,72 @@
     align-items: center;
     box-shadow: 0px 0px 15px #c8c8c8;
     margin-top: 10px;
+    flex: 1;
+    outline: 1px dashed #727272;
 ">
-          <h3 style="
+            <h3 style="
     margin: 10px;
     text-align: center;
 ">My Bio</h3>
-          <textarea class="bio-in" id="bio-in" placeholder="Enter Bio..." style="overflow-wrap: normal;font-family: Nunito;padding: 10px;resize: none;outline: 1px #d9dde3 solid;justify-self: center;"></textarea>
+            <textarea class="bio-in" id="bio-in" placeholder="Enter Bio..." style="overflow-wrap: normal;font-family: Nunito;padding: 10px;resize: none;outline: 1px #d9dde3 solid;justify-self: center;"></textarea>
+          </div>
+        </div>
+        <div style="
+    background: #f5f9ff;
+    border-radius: 10px;
+    margin: 15px 0px;
+    box-shadow: 0px 0px 15px #c8c8c857;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    outline: 1px gray dashed;
+    flex: 1;
+">
+          <h3>Important Information</h3>
+          <div style="
+    display: flex;
+    background-color: #e0e5ed;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    flex: 1;
+    flex-direction: column;
+">
+            <div style="text-align: center;width: 100%;background-color: #ced7e2;height: 50px;align-items: center;display: flex;justify-content: center;flex-direction: row;outline: 1px gray dashed;">
+              <span style="
+    white-space: pre-wrap;
+">Join Date: </span>
+              <span style="color: var(--important)" id="join-date">Date here...</span>
+            </div>
+            <div style="text-align: center;width: 100%;background-color: #ced7e2;height: 50px;align-items: center;display: flex;justify-content: center;flex-direction: row;outline: 1px gray dashed;">
+              <span style="
+    white-space: pre-wrap;
+">Leaderboard Rank: </span>
+              <span style="color: var(--important)" id="leaderboard-rank">#123</span>
+            </div>
+            <div style="text-align: center;width: 100%;background-color: #ced7e2;height: 50px;align-items: center;display: flex;justify-content: center;flex-direction: row;outline: 1px gray dashed;">
+              <span style="
+    white-space: pre-wrap;
+">Country: </span>
+              <span style="color: var(--important)" id="country">Country here...</span>
+            </div>
+            <div style="text-align: center;width: 100%;background-color: #ced7e2;height: 50px;align-items: center;display: flex;justify-content: center;flex-direction: row;outline: 1px gray dashed;">
+              <span style="
+    white-space: pre-wrap;
+">Status: </span>
+              <span style="color: var(--important)" id="status">Banned/Normal</span>
+            </div>
+            <span style="
+    white-space: pre-wrap;
+    margin-top: 30px;
+    color: #8191a6;
+">Nothing else here... 😅</span>
+          </div>
         </div>
       </div>
+      <div style="
+    background-color: white;
+"></div>
     </div>
     <div class="balance-activity" style="
     margin-left: calc(var(--sidebar-width) + 25px);
@@ -155,7 +273,7 @@
     margin: 0;
     color: #bec7d6;
     font-weight: 100;
-">1250.0</h2>
+" id="balance-num">1250.0</h2>
           <h2 style="
     color: #bfc7d5;
     font-size: 40px;
@@ -163,14 +281,15 @@
     margin: 0;
 ">₱</h2>
         </div>
-        <button class="btn" style="
+        <button id="transaction-btn" class="btn" style="
     --btn: var(--important););
     width: 100%;
     color: white;
     --btn-hover: #3d90ff;
     margin: 30px 0px 15px;
 "> Make a Transaction</button>
-        <button class="btn" style="
+        <!--- Buttons have an ID as extra security so i can have an event listener instead of just a command. --->
+        <button id="mine-btn" class="btn" style="
     --btn: white;);
     width: 100%;
     --btn-hover: #f5f5f5;
@@ -213,7 +332,7 @@
             <path d="M12 7v5"></path>
           </svg>Activity
         </div>
-        <div style="flex: 1;background-color: #eef1f6;z-index: 3;border-radius: 20px;margin: 5px;padding-top: 10px;box-shadow: 0px 0px 10px #c8c8c8;padding: px;">
+        <div style="flex: 1;background-color: #eef1f6;z-index: 3;border-radius: 20px;margin: 5px;padding-top: 10px;box-shadow: 0px 0px 10px #c8c8c8;padding: px;" id="activity-list">
           <span style="font-style: italic;color: #c0c2c5;">No activity yet...</span>
         </div>
       </div>
