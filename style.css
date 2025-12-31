@@ -26,6 +26,7 @@
   cursor: pointer;
   border: none;
   gap: 6px;
+  font-size: 15px;
 }
 
 .loginButton:hover {
