@@ -11,6 +11,24 @@
   background-color: white;
 }
 
+.loginButton {
+  --btn-bg: var(--btn);
+  width: 100%;
+  height: 50px;
+  transition: all 0.4s ease-in-out;
+  border-radius: 10px;
+  background: var(--btn-bg);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.loginButton:hover {
+  --btn-bg: var(--btn-hover)
+}
+
 .sidebar {
   position: fixed;
   top: -20px;
