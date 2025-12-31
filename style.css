@@ -57,7 +57,7 @@ strong {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 30px 7px var(--tab-bg);
+  box-shadow: none;
   margin: 0px auto;
 }
 
