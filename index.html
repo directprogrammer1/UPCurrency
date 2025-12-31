@@ -2,12 +2,13 @@
   <head>
     <!-- IT'S NOT CALLED MODAL!!! -->
 	<script type="text/javascript">
-		function copyCode() {
-			  var copyText = document.getElementById("auth-code");
-			  copyText.select();
-			  copyText.setSelectionRange(0, 99999);
-			  navigator.clipboard.writeText(copyText.textContent);
-			  alert("Code copied to clipboard.");
+		function copyDivToClipboard() {
+			var range = document.createRange();
+			range.selectNode(document.getElementById("auth-code"));
+			window.getSelection().removeAllRanges(); 
+			window.getSelection().addRange(range); 
+			document.execCommand("copy");
+			window.getSelection().removeAllRanges();
 		}
 	</script>
     <title>United Patches Currency System</title>
